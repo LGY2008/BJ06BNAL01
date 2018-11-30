@@ -1,0 +1,145 @@
+{
+  "uid" : "8bc68bc1caff86f5",
+  "name" : "TestLogin.test_login[itheimaa-12345611--\\u6b64\\u7528\\u6237\\u4e0d\\u5b58\\u57281]",
+  "fullName" : "test_login.TestLogin.test_login[itheimaa-12345611--\\u6b64\\u7528\\u6237\\u4e0d\\u5b58\\u57281]",
+  "historyId" : "634838a6b924e164cd18a6861fec16ac",
+  "time" : {
+    "start" : 1543547951920,
+    "stop" : 1543547997850,
+    "duration" : 45930
+  },
+  "description" : "",
+  "descriptionHtml" : "",
+  "status" : "failed",
+  "statusMessage" : "TimeoutException: Message: \n",
+  "statusTrace" : "self = <test_login.TestLogin object at 0x039AB990>, username = 'itheimaa'\npassword = '12345611', expect_result = '', expect_toast = '此用户不存在1'\n\n    @allure.step(\"开始执行登录用例\")\n    @pytest.mark.parametrize(\"username,password,expect_result,expect_toast\",get_data_txt())\n    def test_login(self,username,password,expect_result,expect_toast):\n        if expect_result:\n            try:\n                # 输入 用户名\n                self.login.page_input_username(username)\n                # 输入 密码\n                self.login.page_input_password(password)\n                # 点击 登录\n                self.login.page_click_login_btn()\n                # 获取 昵称 进行断言\n                assert expect_result in self.login.page_get_nickname()\n                # 点击 设置\n                self.login.page_click_setting()\n                # 拖拽  消息推送--》修改密码\n                self.login.page_drag_and_drop()\n                # 点击退出\n                self.login.page_click_logout()\n                # 确认退出\n                self.login.page_click_logout_ok()\n                # 点击 我\n                self.login.page_click_me()\n                # 点击 已有账号，去登录\n                self.login.page_click_user_link()\n            except:\n                # 截图\n                self.login.base_getImage()\n                # 打开图片 并写入报告\n                with open(\"./Image/faild.png\",\"rb\")as f:\n                    allure.attach(\"失败原因请附件图：\",f.read(),allure.attach_type.PNG)\n                # 将捕获的异常 抛出\n                raise\n        else:\n            try:\n                # 输入 用户名\n                self.login.page_input_username(username)\n                # 输入 密码\n                self.login.page_input_password(password)\n                # 点击 登录\n                self.login.page_click_login_btn()\n                # 断言\n>               assert expect_toast == self.login.base_get_toast(expect_toast)\n\nScripts\\test_login.py:76: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nBase\\base.py:30: in base_get_toast\n    return self.base_find_element(loc,poll=0.1).text\nBase\\base.py:8: in base_find_element\n    return WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll).until(lambda x:x.find_element(*loc))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"d34f198c-234f-4486-991d-6f252b801704\")>\nmethod = <function Base.base_find_element.<locals>.<lambda> at 0x03990C90>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n            return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36-32\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException",
+  "flaky" : false,
+  "beforeStages" : [ ],
+  "testStage" : {
+    "status" : "failed",
+    "statusMessage" : "TimeoutException: Message: \n",
+    "statusTrace" : "self = <test_login.TestLogin object at 0x039AB990>, username = 'itheimaa'\npassword = '12345611', expect_result = '', expect_toast = '此用户不存在1'\n\n    @allure.step(\"开始执行登录用例\")\n    @pytest.mark.parametrize(\"username,password,expect_result,expect_toast\",get_data_txt())\n    def test_login(self,username,password,expect_result,expect_toast):\n        if expect_result:\n            try:\n                # 输入 用户名\n                self.login.page_input_username(username)\n                # 输入 密码\n                self.login.page_input_password(password)\n                # 点击 登录\n                self.login.page_click_login_btn()\n                # 获取 昵称 进行断言\n                assert expect_result in self.login.page_get_nickname()\n                # 点击 设置\n                self.login.page_click_setting()\n                # 拖拽  消息推送--》修改密码\n                self.login.page_drag_and_drop()\n                # 点击退出\n                self.login.page_click_logout()\n                # 确认退出\n                self.login.page_click_logout_ok()\n                # 点击 我\n                self.login.page_click_me()\n                # 点击 已有账号，去登录\n                self.login.page_click_user_link()\n            except:\n                # 截图\n                self.login.base_getImage()\n                # 打开图片 并写入报告\n                with open(\"./Image/faild.png\",\"rb\")as f:\n                    allure.attach(\"失败原因请附件图：\",f.read(),allure.attach_type.PNG)\n                # 将捕获的异常 抛出\n                raise\n        else:\n            try:\n                # 输入 用户名\n                self.login.page_input_username(username)\n                # 输入 密码\n                self.login.page_input_password(password)\n                # 点击 登录\n                self.login.page_click_login_btn()\n                # 断言\n>               assert expect_toast == self.login.base_get_toast(expect_toast)\n\nScripts\\test_login.py:76: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nBase\\base.py:30: in base_get_toast\n    return self.base_find_element(loc,poll=0.1).text\nBase\\base.py:8: in base_find_element\n    return WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll).until(lambda x:x.find_element(*loc))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"d34f198c-234f-4486-991d-6f252b801704\")>\nmethod = <function Base.base_find_element.<locals>.<lambda> at 0x03990C90>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n            return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36-32\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException",
+    "steps" : [ {
+      "name" : "开始执行登录用例",
+      "time" : {
+        "start" : 1543547951924,
+        "stop" : 1543547997637,
+        "duration" : 45713
+      },
+      "status" : "failed",
+      "statusMessage" : "self = <test_login.TestLogin object at 0x039AB990>, username = 'itheimaa'\npassword = '12345611', expect_result = '', expect_toast = '此用户不存在1'\n\n    @allure.step(\"开始执行登录用例\")\n    @pytest.mark.parametrize(\"username,password,expect_result,expect_toast\",get_data_txt())\n    def test_login(self,username,password,expect_result,expect_toast):\n        if expect_result:\n            try:\n                # 输入 用户名\n                self.login.page_input_username(username)\n                # 输入 密码\n                self.login.page_input_password(password)\n                # 点击 登录\n                self.login.page_click_login_btn()\n                # 获取 昵称 进行断言\n                assert expect_result in self.login.page_get_nickname()\n                # 点击 设置\n                self.login.page_click_setting()\n                # 拖拽  消息推送--》修改密码\n                self.login.page_drag_and_drop()\n                # 点击退出\n                self.login.page_click_logout()\n                # 确认退出\n                self.login.page_click_logout_ok()\n                # 点击 我\n                self.login.page_click_me()\n                # 点击 已有账号，去登录\n                self.login.page_click_user_link()\n            except:\n                # 截图\n                self.login.base_getImage()\n                # 打开图片 并写入报告\n                with open(\"./Image/faild.png\",\"rb\")as f:\n                    allure.attach(\"失败原因请附件图：\",f.read(),allure.attach_type.PNG)\n                # 将捕获的异常 抛出\n                raise\n        else:\n            try:\n                # 输入 用户名\n                self.login.page_input_username(username)\n                # 输入 密码\n                self.login.page_input_password(password)\n                # 点击 登录\n                self.login.page_click_login_btn()\n                # 断言\n>               assert expect_toast == self.login.base_get_toast(expect_toast)\n\nScripts\\test_login.py:76: \n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\nBase\\base.py:30: in base_get_toast\n    return self.base_find_element(loc,poll=0.1).text\nBase\\base.py:8: in base_find_element\n    return WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll).until(lambda x:x.find_element(*loc))\n_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _\n\nself = <selenium.webdriver.support.wait.WebDriverWait (session=\"d34f198c-234f-4486-991d-6f252b801704\")>\nmethod = <function Base.base_find_element.<locals>.<lambda> at 0x03990C90>\nmessage = ''\n\n    def until(self, method, message=''):\n        \"\"\"Calls the method provided with the driver as an argument until the \\\n            return value is not False.\"\"\"\n        screen = None\n        stacktrace = None\n    \n        end_time = time.time() + self._timeout\n        while True:\n            try:\n                value = method(self._driver)\n                if value:\n                    return value\n            except self._ignored_exceptions as exc:\n                screen = getattr(exc, 'screen', None)\n                stacktrace = getattr(exc, 'stacktrace', None)\n            time.sleep(self._poll)\n            if time.time() > end_time:\n                break\n>       raise TimeoutException(message, screen, stacktrace)\nE       selenium.common.exceptions.TimeoutException: Message:\n\nc:\\users\\administrator\\appdata\\local\\programs\\python\\python36-32\\lib\\site-packages\\selenium\\webdriver\\support\\wait.py:80: TimeoutException",
+      "steps" : [ {
+        "name" : "输入 用户名",
+        "time" : {
+          "start" : 1543547951924,
+          "stop" : 1543547953727,
+          "duration" : 1803
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "输入 密码",
+        "time" : {
+          "start" : 1543547953727,
+          "stop" : 1543547957697,
+          "duration" : 3970
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      }, {
+        "name" : "点击登录",
+        "time" : {
+          "start" : 1543547957697,
+          "stop" : 1543547958254,
+          "duration" : 557
+        },
+        "status" : "passed",
+        "steps" : [ ],
+        "attachments" : [ ],
+        "parameters" : [ ],
+        "attachmentsCount" : 0,
+        "shouldDisplayMessage" : false,
+        "stepsCount" : 0,
+        "hasContent" : false
+      } ],
+      "attachments" : [ {
+        "uid" : "8e30aab44a111eea",
+        "name" : "失败原因请附件图：",
+        "source" : "8e30aab44a111eea.png",
+        "type" : "image/png",
+        "size" : 795250
+      } ],
+      "parameters" : [ ],
+      "attachmentsCount" : 1,
+      "shouldDisplayMessage" : true,
+      "stepsCount" : 3,
+      "hasContent" : true
+    } ],
+    "attachments" : [ ],
+    "parameters" : [ ],
+    "attachmentsCount" : 1,
+    "shouldDisplayMessage" : true,
+    "stepsCount" : 4,
+    "hasContent" : true
+  },
+  "afterStages" : [ ],
+  "labels" : [ {
+    "name" : "framework",
+    "value" : "pytest"
+  }, {
+    "name" : "host",
+    "value" : "MS-20180906QJYH"
+  }, {
+    "name" : "language",
+    "value" : "cpython3"
+  }, {
+    "name" : "severity",
+    "value" : "normal"
+  }, {
+    "name" : "thread",
+    "value" : "4484-MainThread"
+  }, {
+    "name" : "suite",
+    "value" : "test_login"
+  }, {
+    "name" : "testClass",
+    "value" : "test_login"
+  }, {
+    "name" : "testMethod",
+    "value" : "TestLogin.test_login[itheimaa-12345611--\\u6b64\\u7528\\u6237\\u4e0d\\u5b58\\u57281]"
+  }, {
+    "name" : "package",
+    "value" : "test_login"
+  }, {
+    "name" : "resultFormat",
+    "value" : "allure1"
+  } ],
+  "parameters" : [ ],
+  "links" : [ ],
+  "hidden" : false,
+  "retry" : false,
+  "extra" : {
+    "severity" : "normal",
+    "retries" : [ ],
+    "categories" : [ {
+      "name" : "Product defects",
+      "matchedStatuses" : [ ],
+      "flaky" : false
+    } ],
+    "tags" : [ ]
+  },
+  "source" : "8bc68bc1caff86f5.json",
+  "parameterValues" : [ ]
+}

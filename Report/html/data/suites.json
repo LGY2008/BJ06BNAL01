@@ -1,0 +1,45 @@
+{
+  "uid" : "98d3104e051c652961429bf95fa0b5d6",
+  "name" : "suites",
+  "children" : [ {
+    "name" : "test_login",
+    "children" : [ {
+      "name" : "TestLogin.test_login[18610453007-123456-itheima-]",
+      "uid" : "e413036ae75a967e",
+      "parentUid" : "7db21133bf389fa43eef71e3fe0b0e68",
+      "status" : "passed",
+      "time" : {
+        "start" : 1543547908439,
+        "stop" : 1543547944940,
+        "duration" : 36501
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TestLogin.test_login[18610453007 -12345611--\\u767b\\u5f55\\u5bc6\\u7801\\u9519\\u8bef]",
+      "uid" : "c2ff2bb295a55cc",
+      "parentUid" : "7db21133bf389fa43eef71e3fe0b0e68",
+      "status" : "passed",
+      "time" : {
+        "start" : 1543547944942,
+        "stop" : 1543547951916,
+        "duration" : 6974
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    }, {
+      "name" : "TestLogin.test_login[itheimaa-12345611--\\u6b64\\u7528\\u6237\\u4e0d\\u5b58\\u57281]",
+      "uid" : "8bc68bc1caff86f5",
+      "parentUid" : "7db21133bf389fa43eef71e3fe0b0e68",
+      "status" : "failed",
+      "time" : {
+        "start" : 1543547951920,
+        "stop" : 1543547997850,
+        "duration" : 45930
+      },
+      "flaky" : false,
+      "parameters" : [ ]
+    } ],
+    "uid" : "7db21133bf389fa43eef71e3fe0b0e68"
+  } ]
+}

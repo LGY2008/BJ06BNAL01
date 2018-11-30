@@ -1,0 +1,31 @@
+[ {
+  "uid" : "8bc68bc1caff86f5",
+  "name" : "TestLogin.test_login[itheimaa-12345611--\\u6b64\\u7528\\u6237\\u4e0d\\u5b58\\u57281]",
+  "time" : {
+    "start" : 1543547951920,
+    "stop" : 1543547997850,
+    "duration" : 45930
+  },
+  "status" : "failed",
+  "severity" : "normal"
+}, {
+  "uid" : "e413036ae75a967e",
+  "name" : "TestLogin.test_login[18610453007-123456-itheima-]",
+  "time" : {
+    "start" : 1543547908439,
+    "stop" : 1543547944940,
+    "duration" : 36501
+  },
+  "status" : "passed",
+  "severity" : "normal"
+}, {
+  "uid" : "c2ff2bb295a55cc",
+  "name" : "TestLogin.test_login[18610453007 -12345611--\\u767b\\u5f55\\u5bc6\\u7801\\u9519\\u8bef]",
+  "time" : {
+    "start" : 1543547944942,
+    "stop" : 1543547951916,
+    "duration" : 6974
+  },
+  "status" : "passed",
+  "severity" : "normal"
+} ]
