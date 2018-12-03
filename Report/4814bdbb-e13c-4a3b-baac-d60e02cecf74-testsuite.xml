@@ -1,0 +1,211 @@
+<ns0:test-suite xmlns:ns0="urn:model.allure.qatools.yandex.ru" start="1543820360718" stop="1543820391384">
+  <name>test_login</name>
+  <labels/>
+  <test-cases>
+    <test-case start="1543820360718" status="broken" stop="1543820391314">
+      <name>TestLogin.test_login[18610453007-123456-itheima-]</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;class 'test_login.TestLogin'&gt;
+
+    def setup_class(self):
+        # 实例化 统一入口类
+        self.login=PageIn().page_get_pagelogin()
+        # 点击 我
+        self.login.page_click_me()
+        # 点击 已有账号，去登录
+&gt;       self.login.page_click_user_link()
+
+Scripts\test_login.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+Page\page_login.py:13: in page_click_user_link
+    self.base_click(Page.login_click_user_link)
+Base\base.py:15: in base_click
+    self.base_find_element(loc).click()
+Base\base.py:8: in base_find_element
+    return WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll).until(lambda x:x.find_element(*loc))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="76dba828-679f-45d9-a81b-6196796fd862")&gt;
+method = &lt;function Base.base_find_element.&lt;locals&gt;.&lt;lambda&gt; at 0x03AC5D68&gt;
+message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+            return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4988-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps>
+        <step start="1543820360733" status="passed" stop="1543820361089">
+          <name>点击我</name>
+          <title>点击我</title>
+          <attachments/>
+          <steps/>
+        </step>
+        <step start="1543820361089" status="failed" stop="1543820391257">
+          <name>点击 已有账号，去登录</name>
+          <title>点击 已有账号，去登录</title>
+          <attachments/>
+          <steps/>
+        </step>
+      </steps>
+    </test-case>
+    <test-case start="1543820391316" status="broken" stop="1543820391343">
+      <name>TestLogin.test_login[18610453007 -12345611--\u767b\u5f55\u5bc6\u7801\u9519\u8bef]</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;class 'test_login.TestLogin'&gt;
+
+    def setup_class(self):
+        # 实例化 统一入口类
+        self.login=PageIn().page_get_pagelogin()
+        # 点击 我
+        self.login.page_click_me()
+        # 点击 已有账号，去登录
+&gt;       self.login.page_click_user_link()
+
+Scripts\test_login.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+Page\page_login.py:13: in page_click_user_link
+    self.base_click(Page.login_click_user_link)
+Base\base.py:15: in base_click
+    self.base_find_element(loc).click()
+Base\base.py:8: in base_find_element
+    return WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll).until(lambda x:x.find_element(*loc))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="76dba828-679f-45d9-a81b-6196796fd862")&gt;
+method = &lt;function Base.base_find_element.&lt;locals&gt;.&lt;lambda&gt; at 0x03AC5D68&gt;
+message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+            return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4988-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+    <test-case start="1543820391344" status="broken" stop="1543820391384">
+      <name>TestLogin.test_login[itheimaa-12345611--\u6b64\u7528\u6237\u4e0d\u5b58\u5728]</name>
+      <failure>
+        <message>TimeoutException: Message: 
+</message>
+        <stack-trace>self = &lt;class 'test_login.TestLogin'&gt;
+
+    def setup_class(self):
+        # 实例化 统一入口类
+        self.login=PageIn().page_get_pagelogin()
+        # 点击 我
+        self.login.page_click_me()
+        # 点击 已有账号，去登录
+&gt;       self.login.page_click_user_link()
+
+Scripts\test_login.py:29: 
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\allure\common.py:62: in impl
+    return func(*a, **kw)
+Page\page_login.py:13: in page_click_user_link
+    self.base_click(Page.login_click_user_link)
+Base\base.py:15: in base_click
+    self.base_find_element(loc).click()
+Base\base.py:8: in base_find_element
+    return WebDriverWait(self.driver,timeout=timeout,poll_frequency=poll).until(lambda x:x.find_element(*loc))
+_ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _ _
+
+self = &lt;selenium.webdriver.support.wait.WebDriverWait (session="76dba828-679f-45d9-a81b-6196796fd862")&gt;
+method = &lt;function Base.base_find_element.&lt;locals&gt;.&lt;lambda&gt; at 0x03AC5D68&gt;
+message = ''
+
+    def until(self, method, message=''):
+        """Calls the method provided with the driver as an argument until the \
+            return value is not False."""
+        screen = None
+        stacktrace = None
+    
+        end_time = time.time() + self._timeout
+        while True:
+            try:
+                value = method(self._driver)
+                if value:
+                    return value
+            except self._ignored_exceptions as exc:
+                screen = getattr(exc, 'screen', None)
+                stacktrace = getattr(exc, 'stacktrace', None)
+            time.sleep(self._poll)
+            if time.time() &gt; end_time:
+                break
+&gt;       raise TimeoutException(message, screen, stacktrace)
+E       selenium.common.exceptions.TimeoutException: Message:
+
+c:\users\administrator\appdata\local\programs\python\python36-32\lib\site-packages\selenium\webdriver\support\wait.py:80: TimeoutException</stack-trace>
+      </failure>
+      <attachments/>
+      <labels>
+        <label name="severity" value="normal"/>
+        <label name="thread" value="4988-MainThread"/>
+        <label name="host" value="MS-20180906QJYH"/>
+        <label name="framework" value="pytest"/>
+        <label name="language" value="cpython3"/>
+      </labels>
+      <steps/>
+    </test-case>
+  </test-cases>
+</ns0:test-suite>

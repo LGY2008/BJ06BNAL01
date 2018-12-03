@@ -1,0 +1,18 @@
+add_address:
+  al_add_address_001:
+    name: "李四"
+    phone: "18622223333"
+    sheng: "广东"
+    shi: "深圳"
+    qu: "宝安"
+    info_address: "留仙二路159号13楼"
+    code: "100070"
+update_address:
+  al_update_address_001:
+    name: "王五"
+    phone: "18066668888"
+    sheng: "江苏"
+    shi: "南京"
+    qu: "白下区"
+    info_address: "白下区路159号203楼"
+    code: "100060"

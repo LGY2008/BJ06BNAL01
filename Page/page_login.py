@@ -49,3 +49,18 @@ class PageLogin(Base):
     @allure.step("确认 退出")
     def page_click_logout_ok(self):
         self.base_click(Page.login_click_logout_ok)
+
+    # 封装 登录整体方法+点击设置
+    def page_login_and_setting(self,username="18610453007",password="123456"):
+        # 点击我
+        self.page_click_me()
+        # 点击已有账号，去登陆
+        self.page_click_user_link()
+        # 输入用户名
+        self.page_input_username(username)
+        # 输入密码
+        self.page_input_password(password)
+        # 点击登录
+        self.page_click_login_btn()
+        # 点击设置
+        self.page_click_setting()
